@@ -1,15 +1,22 @@
+import { PatternExampleModule } from './components/pattern-example/pattern-example.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WidgetWrapperComponent } from './components/pattern-example/widget-wrapper/widget-wrapper.component';
-import { WidgetComponent } from './components/pattern-example/widget/widget.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
-  declarations: [AppComponent, WidgetWrapperComponent, WidgetComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    PatternExampleModule,
+    MatToolbarModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

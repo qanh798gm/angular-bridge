@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WidgetComponent } from './widget.component';
+import { VelocityWidgetComponent } from './velocity-widget.component';
 
-describe('WidgetComponent', () => {
-  let component: WidgetComponent;
-  let fixture: ComponentFixture<WidgetComponent>;
+describe('VelocityWidgetComponent', () => {
+  let component: VelocityWidgetComponent;
+  let fixture: ComponentFixture<VelocityWidgetComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WidgetComponent ]
+      declarations: [ VelocityWidgetComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WidgetComponent);
+    fixture = TestBed.createComponent(VelocityWidgetComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
