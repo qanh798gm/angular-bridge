@@ -1,5 +1,5 @@
-import { Widget } from './../widgets/widget.interface';
-import { WIDGET } from './../widgets/widget.token';
+import { Widget } from '../widget.interface';
+import { WIDGET } from '../widget.token';
 import { Component, ContentChild, OnInit } from '@angular/core';
 
 @Component({

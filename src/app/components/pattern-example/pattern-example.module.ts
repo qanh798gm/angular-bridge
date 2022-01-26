@@ -1,33 +1,27 @@
 import { Routes, RouterModule } from '@angular/router';
-import { WidgetWrapperComponent } from './widget-wrapper/widget-wrapper.component';
+import { WidgetWrapperComponent } from './widgets/widget-wrapper/widget-wrapper.component';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { VelocityWidgetComponent } from './widgets/velocity-widget/velocity-widget.component';
 import { WeatherWidgetComponent } from './widgets/weather-widget/weather-widget.component';
+import { WidgetListComponent } from './widget-list/widget-list.component';
+import { ShareModule } from '../share/share.module';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: WidgetListComponent,
+  },
+];
 
 @NgModule({
   declarations: [
     WidgetWrapperComponent,
     VelocityWidgetComponent,
     WeatherWidgetComponent,
+    WidgetListComponent,
   ],
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatIconModule,
-    MatDividerModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    RouterModule.forChild(routes),
-  ],
+  imports: [ShareModule, RouterModule.forChild(routes)],
   exports: [
     WidgetWrapperComponent,
     VelocityWidgetComponent,

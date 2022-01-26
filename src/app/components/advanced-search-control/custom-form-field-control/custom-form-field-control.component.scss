@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  align-items: center;
+  opacity: 0;
+
+  &.floated {
+    opacity: 1;
+  }
+
+  .select {
+    max-width: 100px;
+    margin-left: 0.7rem;
+  }
+  .divider {
+    height: 1em;
+    color: currentColor;
+    margin: 0 0.75rem;
+  }
+}

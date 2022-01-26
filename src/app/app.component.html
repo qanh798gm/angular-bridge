@@ -1,29 +1,14 @@
 <div class="app-wrapper">
   <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span>Angular Bridge</span>
+    <mat-toolbar-row class="toolbar-row">
+      <span>Angular Advanced Concepts</span>
       <span class="example-spacer"></span>
+      <button mat-raised-button color="basic" routerLink="/search">Search</button>
+      <button mat-raised-button color="accent" routerLink="/widget">Widget</button>
     </mat-toolbar-row>
   </mat-toolbar>
 
   <section class="app-content">
-    <app-widget-wrapper>
-      <ng-container widgetTitle>
-        <h1>Weather Widget</h1>
-      </ng-container>
-      <ng-container widgetContent>
-        <app-weather-widget></app-weather-widget>
-      </ng-container>
-    </app-widget-wrapper>
-
-    <app-widget-wrapper>
-      <ng-container widgetTitle>
-        <h1>Velocity Widget</h1>
-      </ng-container>
-      <ng-container widgetContent>
-        <app-velocity-widget></app-velocity-widget>
-      </ng-container>
-    </app-widget-wrapper>
+    <router-outlet></router-outlet>
   </section>
-
 </div>
