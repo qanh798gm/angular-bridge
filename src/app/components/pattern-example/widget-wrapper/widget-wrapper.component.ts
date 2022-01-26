@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Widget } from './../widgets/widget.interface';
+import { WIDGET } from './../widgets/widget.token';
+import { Component, ContentChild, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-widget-wrapper',
@@ -6,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./widget-wrapper.component.scss'],
 })
 export class WidgetWrapperComponent implements OnInit {
+  @ContentChild(WIDGET as any, { static: true })
+  widget: Widget;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.widget.load();
+  }
 
-  onRefresh() {}
+  onRefresh() {
+    this.widget.refresh();
+  }
 }

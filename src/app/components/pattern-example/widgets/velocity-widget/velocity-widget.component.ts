@@ -1,11 +1,19 @@
+import { Widget } from './../widget.interface';
 import { Component, OnInit } from '@angular/core';
+import { WIDGET } from '../widget.token';
 
 @Component({
   selector: 'app-velocity-widget',
   templateUrl: './velocity-widget.component.html',
   styleUrls: ['./velocity-widget.component.scss'],
+  providers: [
+    {
+      provide: WIDGET,
+      useExisting: VelocityWidgetComponent,
+    },
+  ],
 })
-export class VelocityWidgetComponent implements OnInit {
+export class VelocityWidgetComponent implements OnInit, Widget {
   isRefreshing: boolean = false;
 
   constructor() {}

@@ -8,11 +8,21 @@
 
   <section class="app-content">
     <app-widget-wrapper>
-      <app-weather-widget></app-weather-widget>
+      <ng-container widgetTitle>
+        <h1>Weather Widget</h1>
+      </ng-container>
+      <ng-container widgetContent>
+        <app-weather-widget></app-weather-widget>
+      </ng-container>
     </app-widget-wrapper>
 
     <app-widget-wrapper>
-      <app-velocity-widget></app-velocity-widget>
+      <ng-container widgetTitle>
+        <h1>Velocity Widget</h1>
+      </ng-container>
+      <ng-container widgetContent>
+        <app-velocity-widget></app-velocity-widget>
+      </ng-container>
     </app-widget-wrapper>
   </section>
 
