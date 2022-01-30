@@ -16,6 +16,18 @@ const routes: Routes = [
         (m) => m.PatternExampleModule
       ),
   },
+  {
+    path: 'change-detection',
+    loadChildren: () =>
+      import('./components/parent/change-detection.module').then(
+        (m) => m.ChageDetectionModule
+      ),
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'search',
+  },
 ];
 
 @NgModule({
