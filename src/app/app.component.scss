@@ -1,0 +1,13 @@
+.app-wrapper {
+  height: 100%;
+  .toolbar-row > * {
+    margin-right: 10px;
+  }
+  .app-content {
+    margin-top: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
